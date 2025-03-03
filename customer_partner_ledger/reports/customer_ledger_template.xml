@@ -1,21 +1,9 @@
 <odoo>
-    <!-- <report
-        id="customer_ledger_report"
-        string="Customer Ledger"
-        model="customer.ledger.report"
-        report_type="qweb-pdf"
-        binding_model_id="customer.ledger.report"
-        groups="base.group_user"
-        name="customer_partner_ledger.report_customer_ledger"
-        file="customer_partner_ledger.report_customer_ledger"
-        print_report_name="'Customer Ledger - %s' % (object.customer_id.name)"
-    /> -->
-
     <record id="customer_ledger_report" model="ir.actions.report">
         <field name="name">Customer Ledger</field>
         <field name="model">customer.ledger.report</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="binding_model_id" ref="customer.ledger.report"/>
+        <!-- <field name="binding_model_id" ref="customer.ledger.report"/> -->
         <!-- <field name="groups_id" eval="[(4, ref('base.group_user'))]"/> -->
         <field name="report_name">customer_partner_ledger.report_customer_ledger</field>
         <field name="print_report_name">'Customer Ledger - %s' % (object.customer_id.name)</field>
