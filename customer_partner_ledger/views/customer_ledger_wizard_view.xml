@@ -10,7 +10,10 @@
                 </group>
 
                 <footer>
-                    <button name="action_generate_ledger" type="object" string="Generate Ledger" class="btn-primary"/>
+                    <button name="action_preview_report" type="object" string="Preview Report" class="btn-primary"/>
+
+                    <button name="action_generate_ledger" type="object" string="Export PDF" class="btn-primary"/>
+
                     <button string="Close" class="btn-secondary" special="cancel"/>
                 </footer>
             </form>
