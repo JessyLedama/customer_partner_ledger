@@ -5,6 +5,17 @@ class CustomerLedgerReport(models.Model):
     _description = 'Customer Ledger Report'
     
     customer_id = fields.Many2one('res.partner', string="Customer", required=True)
+
+    date = fields.Date(string="Date")
+    
+    description = fields.Char(string="Description")
+    
+    debit = fields.Float(string="Debit")
+    
+    credit = fields.Float(string="Credit")
+    
+    balance = fields.Float(string="Balance")
+
     
     @api.model
     def get_ledger_data(self, customer_id):
@@ -80,3 +91,15 @@ class CustomerLedgerReport(models.Model):
 
 
         return ledger_entries
+
+    def action_export_pdf(self):
+        """
+        Triggers the QWeb PDF report for customer ledger.
+        """
+        # return self.env.ref('customer_partner_ledger.customer_ledger_report').report_action(self)
+
+        self.ensure_one()
+
+        return self.env.ref('customer_partner_ledger.customer_ledger_report').report_action(
+            self.env['customer.ledger.report'].create({'customer_id': self.customer_id.id})
+            )
