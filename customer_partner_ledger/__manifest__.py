@@ -11,7 +11,7 @@
         This module enables you to generate a detailed ledger report for your customers and vendors, and gives you a closing balance. For instances where you use opening balances, it takes that into account as well when generating the report.
     """,
     
-    'author': 'SIMI Technologies',
+    'author': 'Jessy Ledama',
     
     'website': 'https://simitechnologies.co.ke',
     
