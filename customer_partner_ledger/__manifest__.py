@@ -3,7 +3,7 @@
     'version': '1.0',
     'category': 'Accounting',
     'summary': 'Generate a detailed customer ledger report',
-    'author': 'SIMI Technologies',
+    'author': 'Jessy Ledama',
     'website': 'https://simitechnologies.co.ke',
     'depends': ['account'],
     'data': [
